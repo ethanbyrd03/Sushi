@@ -59,3 +59,4 @@ public interface Ingredient {
    */
   boolean equals(Ingredient other);
 }
+
