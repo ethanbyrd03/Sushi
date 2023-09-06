@@ -51,8 +51,8 @@ public class AvocadoPortion implements IngredientPortion{
     @Override
     public IngredientPortion combine(IngredientPortion other) {
         if (other == null){return this;}
-        if (other.getIngredient() != this.getIngredient()) {throw new IllegalArgumentException();}
-        IngredientPortion a = new AvocadoPortion(this.amount + other.getAmount());
-        return a;
+        if (other.getIngredient().getName() != this.getIngredient().getName()) {throw new IllegalArgumentException();}
+        this.amount += other.getAmount();
+        return this;
     }
 }

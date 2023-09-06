@@ -15,7 +15,8 @@ public class AppTest {
   @Test
   public void typename() {
     IngredientPortion a = new AvocadoPortion(0.5);
-    System.out.println(a.getCalories());
+    a.combine(new AvocadoPortion(0.5));
+    System.out.println(a.getAmount());
   }
 
 }
