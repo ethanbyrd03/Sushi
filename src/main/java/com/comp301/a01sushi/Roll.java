@@ -14,19 +14,14 @@ public class Roll implements Sushi{
             }
         }
         IngredientPortion[] a = roll_ingredients.clone();
-        for (int i = 0; i < a.length; i++) {
+        /*for (int i = 0; i < a.length; i++) {
             for (int j = i; j < a.length; j++) {
                 if (a[i].getName() == a[j].getName()) {
                     a[i].combine(a[j]);
                     a[j] = null;
-                    /*for (int k = j; k< a.length; k++) {
+                    for (int k = j; k< a.length; k++) {
                         if (a[k+1] != null){
                         a[k] = a[k+1];}*/
-
-                        }
-                    }
-                }
-
 
         int s = 0;
         for (int i = 0; i < a.length; i++) {
