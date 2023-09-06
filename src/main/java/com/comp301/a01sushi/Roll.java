@@ -21,7 +21,7 @@ public class Roll implements Sushi{
                     a[j] = null;
                     for (int k = j; k< a.length; k++) {
                         if (a[k+1] != null){
-                        a[k] = a[k+1];}*/
+                        a[k] = a[k+1];}
 
         int s = 0;
         for (int i = 0; i < a.length; i++) {
@@ -32,7 +32,7 @@ public class Roll implements Sushi{
                 }
             }
         if (s == 0) {a[a.length-1] = new SeaweedPortion(0.1);}
-        }
+        }*/
         this.ingredients = a;
     }
     @Override
