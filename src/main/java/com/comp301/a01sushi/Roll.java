@@ -1,5 +1,8 @@
 package com.comp301.a01sushi;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Roll implements Sushi{
 
     private String name;
@@ -60,7 +63,8 @@ public class Roll implements Sushi{
         for (int i = 0; i < this.ingredients.length; i++) {
             a += this.ingredients[i].getCost();
         }
-        return a;
+        double b = Math.round(a * 100.0)/100;
+        return b;
     }
 
     @Override
