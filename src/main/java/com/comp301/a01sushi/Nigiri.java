@@ -1,5 +1,7 @@
 package com.comp301.a01sushi;
 
+import java.util.Map;
+
 public class Nigiri implements Sushi{
 
     public enum NigiriType {TUNA, YELLOWTAIL, EEL, CRAB, SHRIMP}
@@ -46,7 +48,7 @@ public class Nigiri implements Sushi{
 
     @Override
     public int getCalories() {
-        return ((int)(this.amount.getCalories()) + (int)(this.riceamt.getCalories()));
+        return (int) (Math.round(this.amount.getCalories()) + Math.round(this.riceamt.getCalories()));
     }
 
     @Override
