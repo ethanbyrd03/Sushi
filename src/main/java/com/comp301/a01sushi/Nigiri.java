@@ -38,7 +38,7 @@ public class Nigiri implements Sushi{
 
     @Override
     public IngredientPortion[] getIngredients() {
-        IngredientPortion[] a = new IngredientPortion[10];
+        IngredientPortion[] a = new IngredientPortion[2];
         a[0] = this.amount;
         a[1] = this.riceamt;
         return a;
@@ -46,7 +46,7 @@ public class Nigiri implements Sushi{
 
     @Override
     public int getCalories() {
-        return (int) (this.amount.getCalories() + this.riceamt.getCalories());
+        return ((int)(this.amount.getCalories()) + (int)(this.riceamt.getCalories()));
     }
 
     @Override
