@@ -36,14 +36,14 @@ public class Sashimi implements Sushi{
 
     @Override
     public IngredientPortion[] getIngredients() {
-        IngredientPortion[] a = new IngredientPortion[50];
+        IngredientPortion[] a = new IngredientPortion[1];
         a[0] = this.amount;
         return a;
     }
 
     @Override
     public int getCalories() {
-        return (int) this.amount.getCalories();
+        return (int) Math.round(this.amount.getCalories());
     }
 
     @Override
