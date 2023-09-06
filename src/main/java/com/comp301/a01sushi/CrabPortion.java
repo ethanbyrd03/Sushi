@@ -4,7 +4,7 @@ public class CrabPortion implements IngredientPortion{
     private double amount;
 
     public CrabPortion(double amt) {
-        if (amt >0) {throw new IllegalArgumentException("amount given is invalid");}
+        if (amt < 0) {throw new IllegalArgumentException("amount given is invalid");}
         this.amount = amt;
     }
 
@@ -51,6 +51,7 @@ public class CrabPortion implements IngredientPortion{
     @Override
     public IngredientPortion combine(IngredientPortion other) {
         if (other == null){return this;}
+        if (other.getIngredient() != this.getIngredient()) {throw new IllegalArgumentException();}
         IngredientPortion a = new CrabPortion(this.amount + other.getAmount());
         return a;
     }

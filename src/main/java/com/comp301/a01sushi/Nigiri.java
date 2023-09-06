@@ -2,7 +2,7 @@ package com.comp301.a01sushi;
 
 public class Nigiri implements Sushi{
 
-    public enum NigiriType {TUNA, YELLOWTAIL, EEL, CRAB, SHRIMP;}
+    public enum NigiriType {TUNA, YELLOWTAIL, EEL, CRAB, SHRIMP}
 
     private IngredientPortion riceamt;
     private IngredientPortion amount;
@@ -10,7 +10,7 @@ public class Nigiri implements Sushi{
 
     public Nigiri(NigiriType type) {
         this.riceamt = new RicePortion(0.5);
-        if (type.name() == "TUNA") {
+        if (type.name().equals("TUNA")) {
             this.type = new Tuna();
             this.amount = new TunaPortion(0.75);
         }

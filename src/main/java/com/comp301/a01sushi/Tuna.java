@@ -8,7 +8,7 @@ public class Tuna implements Ingredient{
     private boolean HasRice;
     private boolean HasShellfish;
 
-    public void Tuna() {
+    public Tuna() {
         this.name = "tuna";
         this.PricePerOunce = 1.67;
         this.CaloriesPerOunce = 42;

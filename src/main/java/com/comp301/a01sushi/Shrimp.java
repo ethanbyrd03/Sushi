@@ -8,7 +8,7 @@ public class Shrimp implements Ingredient{
     private boolean HasRice;
     private boolean HasShellfish;
 
-    public void Shrimp() {
+    public Shrimp() {
         this.name = "shrimp";
         this.PricePerOunce = 0.65;
         this.CaloriesPerOunce = 32;

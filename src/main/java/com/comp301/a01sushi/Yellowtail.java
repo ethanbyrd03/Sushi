@@ -8,7 +8,7 @@ public class Yellowtail implements Ingredient{
     private boolean HasRice;
     private boolean HasShellfish;
 
-    public void Yellowtail() {
+    public Yellowtail() {
         this.name = "yellowtail";
         this.PricePerOunce = 0.74;
         this.CaloriesPerOunce = 57;

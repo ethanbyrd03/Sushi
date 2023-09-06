@@ -8,7 +8,7 @@ public class Avocado implements Ingredient{
     private boolean HasRice;
     private boolean HasShellfish;
 
-    public void Avocado() {
+    public Avocado() {
         this.name = "avocado";
         this.PricePerOunce = 0.24;
         this.CaloriesPerOunce = 42;

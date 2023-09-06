@@ -8,7 +8,7 @@ public class Rice implements Ingredient{
     private boolean HasRice;
     private boolean HasShellfish;
 
-    public void Rice() {
+    public Rice() {
         this.name = "rice";
         this.PricePerOunce = 0.13;
         this.CaloriesPerOunce = 34;

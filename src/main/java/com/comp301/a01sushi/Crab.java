@@ -8,7 +8,7 @@ public class Crab implements  Ingredient{
     private boolean HasRice;
     private boolean HasShellfish;
 
-    public void Crab() {
+    public Crab() {
         this.name = "crab";
         this.PricePerOunce = 0.72;
         this.CaloriesPerOunce = 37;

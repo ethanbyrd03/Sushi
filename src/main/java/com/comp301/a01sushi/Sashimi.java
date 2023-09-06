@@ -7,7 +7,7 @@ public class Sashimi implements Sushi{
     private IngredientPortion amount;
     private Ingredient type;
 
-    public void Sashimi(SashimiType type) {
+    public Sashimi(SashimiType type) {
         if (type.name() == "TUNA") {
             this.type = new Tuna();
             this.amount = new TunaPortion(0.75);

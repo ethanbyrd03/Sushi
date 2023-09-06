@@ -8,7 +8,7 @@ public class Eel implements Ingredient{
     private boolean HasRice;
     private boolean HasShellfish;
 
-    public void Eel() {
+    public Eel() {
         this.name = "eel";
         this.PricePerOunce = 2.15;
         this.CaloriesPerOunce = 82;

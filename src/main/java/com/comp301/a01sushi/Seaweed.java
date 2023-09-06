@@ -8,7 +8,7 @@ public class Seaweed implements Ingredient{
     private boolean HasRice;
     private boolean HasShellfish;
 
-    public void Seaweed() {
+    public Seaweed() {
         this.name = "seaweed";
         this.PricePerOunce = 2.85;
         this.CaloriesPerOunce = 105;
