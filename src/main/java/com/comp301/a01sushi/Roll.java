@@ -59,13 +59,13 @@ public class Roll implements Sushi{
 
     @Override
     public double getCost() {
-        double a = 0.0;
+        double a = 0.00;
         for (int i = 0; i < this.ingredients.length; i++) {
             a += this.ingredients[i].getCost();
         }
         double aa = a * 100;
-        double b = Math.round(aa)/100;
-        return b;
+        double ab = Math.round(aa);
+        return ab/100;
     }
 
     @Override
