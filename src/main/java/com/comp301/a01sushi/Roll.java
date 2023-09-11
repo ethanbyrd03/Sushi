@@ -1,8 +1,5 @@
 package com.comp301.a01sushi;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-
 public class Roll implements Sushi{
 
     private String name;
@@ -27,7 +24,7 @@ public class Roll implements Sushi{
 
         int s = 0;
         for (int i = 0; i < a.length; i++) {
-            if (a[i].getName() == "seaweed"){
+            if (a[i].getIngredient().equals(new SeaweedPortion(0.0).getIngredient())){
                 if (a[i].getAmount() < 0.1) {
                     a[i].combine(new SeaweedPortion(0.1 - a[i].getAmount()));
                     s += 1;
