@@ -8,6 +8,9 @@ public class SeaweedPortion implements IngredientPortion{
         this.amount = amt;
     }
 
+    public void setAmount(double amt) {
+        this.amount = amt;
+    }
     @Override
     public Ingredient getIngredient() {
         return new Seaweed();

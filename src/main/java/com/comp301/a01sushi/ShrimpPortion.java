@@ -7,7 +7,9 @@ public class ShrimpPortion implements IngredientPortion{
         if (amt < 0) {throw new IllegalArgumentException("amount given is invalid");}
         this.amount = amt;
     }
-
+    public void setAmount(double amt) {
+        this.amount = amt;
+    }
     @Override
     public Ingredient getIngredient() {
         return new Shrimp();

@@ -14,6 +14,42 @@ public class Roll implements Sushi{
             }
         }
         IngredientPortion[] a = roll_ingredients.clone();
+        for (int i = 0; i<a.length; i++) {
+            for (int j = i + 1; j<a.length; j++) {
+                if (a[i].getName().equals(a[j].getName())) {
+                    a[i].combine(a[j]);
+                    IngredientPortion[] b = new IngredientPortion[a.length - 1];
+                    for (int o = 0; o<b.length; o++) {
+                        if (o < j) {
+                            b[o] = a[o];
+                        }
+                        else {
+                            b[o] = a[o+1];
+                        }
+                    }
+                    a = b;
+                }
+            }
+        }
+
+
+        int s = 0;
+        for (int i = 0; i<a.length; i++) {
+            if (a[i].getName() == "seaweed"){
+                if (a[i].getAmount() < 0.1) {
+                    a[i].setAmount(0.1);
+                    s = 1;
+                }
+            }
+        }
+        if (s == 0) {
+            IngredientPortion[] b = new IngredientPortion[a.length + 1];
+            for (int i = 0; i<b.length; i++) {
+                b[i] = a[i];
+            }
+            b[b.length - 1] = new SeaweedPortion(0.1);
+            a = b;
+        }
         this.ingredients = a;
     }
     @Override

@@ -68,4 +68,6 @@ public interface IngredientPortion {
    *     portion and the other ingredient portion. HINT: Use the equals() method to test equality.
    */
   IngredientPortion combine(IngredientPortion other);
+
+  void setAmount(double amt);
 }
