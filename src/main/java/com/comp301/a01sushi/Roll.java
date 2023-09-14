@@ -44,7 +44,7 @@ public class Roll implements Sushi{
         }
         if (s == 0) {
             IngredientPortion[] b = new IngredientPortion[a.length + 1];
-            for (int i = 0; i<b.length; i++) {
+            for (int i = 0; i<a.length; i++) {
                 b[i] = a[i];
             }
             b[b.length - 1] = new SeaweedPortion(0.1);
