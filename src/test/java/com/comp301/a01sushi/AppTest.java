@@ -12,11 +12,18 @@ public class AppTest {
   public void shouldAnswerWithTrue() {
     assertTrue(true);
   }
+
   @Test
   public void typename() {
-    IngredientPortion a = new AvocadoPortion(0.5);
-    a.combine(new AvocadoPortion(0.5));
-    System.out.println(a.getAmount());
+    IngredientPortion[] a = new IngredientPortion[2];
+    a[0] = new RicePortion(0.5);
+    a[1] = new AvocadoPortion(0.3);
+    Roll b = new Roll("dragon", a);
+    System.out.println(b.getName());
+    System.out.println(b.getCost());
+    System.out.println(b.getIsVegetarian());
+    System.out.println(b.getCalories());
+    System.out.println(b.getIngredients().length);
   }
 
 }

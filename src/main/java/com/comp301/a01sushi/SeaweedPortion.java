@@ -1,61 +1,68 @@
 package com.comp301.a01sushi;
 
-public class SeaweedPortion implements IngredientPortion{
-    private double amount;
+public class SeaweedPortion implements IngredientPortion {
+  private double amount;
 
-    public SeaweedPortion(double amt) {
-        if (amt < 0) {throw new IllegalArgumentException("amount given is invalid");}
-        this.amount = amt;
+  public SeaweedPortion(double amt) {
+    if (amt < 0) {
+      throw new IllegalArgumentException("amount given is invalid");
     }
+    this.amount = amt;
+  }
 
-    public void setAmount(double amt) {
-        this.amount = amt;
-    }
-    @Override
-    public Ingredient getIngredient() {
-        return new Seaweed();
-    }
+  public void setAmount(double amt) {
+    this.amount = amt;
+  }
 
-    @Override
-    public double getAmount() {
-        return this.amount;
-    }
+  @Override
+  public Ingredient getIngredient() {
+    return new Seaweed();
+  }
 
-    @Override
-    public String getName() {
-        return this.getIngredient().getName();
-    }
+  @Override
+  public double getAmount() {
+    return this.amount;
+  }
 
-    @Override
-    public boolean getIsVegetarian() {
-        return this.getIngredient().getIsVegetarian();
-    }
+  @Override
+  public String getName() {
+    return this.getIngredient().getName();
+  }
 
-    @Override
-    public boolean getIsRice() {
-        return this.getIngredient().getIsRice();
-    }
+  @Override
+  public boolean getIsVegetarian() {
+    return this.getIngredient().getIsVegetarian();
+  }
 
-    @Override
-    public boolean getIsShellfish() {
-        return this.getIngredient().getIsShellfish();
-    }
+  @Override
+  public boolean getIsRice() {
+    return this.getIngredient().getIsRice();
+  }
 
-    @Override
-    public double getCalories() {
-        return this.amount * this.getIngredient().getCaloriesPerOunce();
-    }
+  @Override
+  public boolean getIsShellfish() {
+    return this.getIngredient().getIsShellfish();
+  }
 
-    @Override
-    public double getCost() {
-        return this.amount * this.getIngredient().getPricePerOunce();
-    }
+  @Override
+  public double getCalories() {
+    return this.amount * this.getIngredient().getCaloriesPerOunce();
+  }
 
-    @Override
-    public IngredientPortion combine(IngredientPortion other) {
-        if (other == null){return this;}
-        if (other.getIngredient().getName() != this.getIngredient().getName()) {throw new IllegalArgumentException();}
-        this.amount += other.getAmount();
-        return this;
+  @Override
+  public double getCost() {
+    return this.amount * this.getIngredient().getPricePerOunce();
+  }
+
+  @Override
+  public IngredientPortion combine(IngredientPortion other) {
+    if (other == null) {
+      return this;
     }
+    if (other.getIngredient().getName() != this.getIngredient().getName()) {
+      throw new IllegalArgumentException();
+    }
+    this.amount += other.getAmount();
+    return this;
+  }
 }
