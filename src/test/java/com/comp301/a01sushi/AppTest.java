@@ -15,9 +15,12 @@ public class AppTest {
 
   @Test
   public void typename() {
-    IngredientPortion[] a = new IngredientPortion[2];
+    IngredientPortion[] a = new IngredientPortion[4];
     a[0] = new RicePortion(0.5);
-    a[1] = new AvocadoPortion(0.3);
+    a[1] = new SeaweedPortion(0.3);
+    a[2] = new AvocadoPortion(0.1);
+    a[3] = new SeaweedPortion(0.1);
+
     Roll b = new Roll("dragon", a);
     System.out.println(b.getName());
     System.out.println(b.getCost());

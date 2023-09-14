@@ -38,8 +38,8 @@ public class Roll implements Sushi {
       if (a[i].getName() == "seaweed") {
         if (a[i].getAmount() < 0.1) {
           a[i].setAmount(0.1);
-          s = 1;
         }
+        s = 1;
       }
     }
     if (s == 0) {
@@ -65,11 +65,11 @@ public class Roll implements Sushi {
 
   @Override
   public int getCalories() {
-    int a = 0;
+    double a = 0;
     for (int i = 0; i < this.ingredients.length; i++) {
       a += this.ingredients[i].getCalories();
     }
-    return a;
+    return (int) Math.round(a);
   }
 
   @Override
